@@ -17,11 +17,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    NSLog(@"Hello amazing");
-    NSLog(@"Hello amazing");
     
-    float i = 22;
+   
 }
 
 - (void)didReceiveMemoryWarning
@@ -29,5 +26,24 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)hello:(id)sender {
+    int a = 10
+    
+    for(int b=1; b<=a; b++)
+    {
+        for(int x=a-1; x>=b; x--)
+        {
+            printf(" ");
+        }
+        
+        for(int x=1; x<=b; x++)
+        {
+            printf("*");
+                }
+        printf("\n");
+        
+    }
+}
+
 
 @end

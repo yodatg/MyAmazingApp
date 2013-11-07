@@ -20,6 +20,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     NSLog(@"Hello amazing");
     NSLog(@"Hello amazing");
+    
+    float i = 22;
 }
 
 - (void)didReceiveMemoryWarning

@@ -27,7 +27,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)hello:(id)sender {
-    int a = 10
+    int a = 10;
     
     for(int b=1; b<=a; b++)
     {

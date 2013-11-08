@@ -20,7 +20,7 @@
     
     int l;
     int x;
-   
+    int u;
 }
 
 - (void)didReceiveMemoryWarning

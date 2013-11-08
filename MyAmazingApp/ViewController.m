@@ -19,7 +19,7 @@
     [super viewDidLoad];
     
     int l;
-    
+    int x;
    
 }
 

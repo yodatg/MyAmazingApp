@@ -52,5 +52,44 @@
     }
 }
 
+-(BOOL)validateFields{
+    
+    BOOL dateEntry = TRUE;
+    BOOL saveOrderType = TRUE;
+    BOOL _editRequired = TRUE;
+    UITextField *editedTextField;
+    NSString *_editRegEx;
+    
+    BOOL valid = FALSE;
+    if (dateEntry != TRUE && saveOrderType != TRUE) {
+        if (_editRequired==YES) {
+            if ([[[editedTextField text] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] isEqualToString:@""]) {
+                valid = FALSE;
+            } else {
+                valid = TRUE;
+            }
+        } else {
+            valid = TRUE;
+        }
+        if (_editRegEx) {
+            NSRegularExpression *regex = [NSRegularExpression
+                                          regularExpressionWithPattern:_editRegEx
+                                          options:NSRegularExpressionCaseInsensitive
+                                          error:nil];
+            if ([regex numberOfMatchesInString:[editedTextField text] options:0 range:NSMakeRange(0, [[editedTextField text] length])]==0) {
+                valid=FALSE;
+            } else {
+                valid = TRUE;
+            }
+        } else {
+            valid = TRUE;
+        }
+        
+    } else {
+        valid = TRUE;
+    }
+    return valid;
+}
+
 
 @end

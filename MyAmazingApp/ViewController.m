@@ -30,6 +30,8 @@
     
     int z;
     
+    int y;
+    
     int a = 10;
     
     for(int b=1; b<=a; b++)
